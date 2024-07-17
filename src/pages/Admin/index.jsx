@@ -8,10 +8,10 @@ import { useSelector } from 'react-redux'
 
 function Admin() {
   const navigate = useNavigate();
-  const user = useSelector((state) => state.user);
+  const { user } = useSelector((state) => state.user);
 
   const navigation = () => {
-    if(user.user.role === 'partner') {
+    if(user.role === 'partner') {
       navigate('/partner');
     } else if(user.user.role === 'user') {
       navigate('/');

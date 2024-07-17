@@ -13,9 +13,9 @@ const TheatreFormModal = ({isModalOpen, setIsModalOpen, selectedTheatre, setSele
     const navigate = useNavigate()
 
     const navigation = () => {
-      if(user.user.role === 'admin') {
+      if(user.role === 'admin') {
         navigate('/admin');
-      } else if(user.user.role === 'user') {
+      } else if(user.role === 'user') {
         navigate('/');
       }
     }
